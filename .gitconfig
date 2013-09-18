@@ -1,0 +1,30 @@
+[merge]
+	tool = kdiff3
+[user]
+	name = localpcguy
+	email = mike@local-pc-guy.com
+[core]
+	editor = 'c:/program files/sublime text 2/sublime_text.exe' -w
+	autocrlf = false
+[diff]
+	guitool = winmerge
+[difftool "winmerge"]
+	path = c:/Program Files (x86)/winmerge/winmergeu.exe
+	cmd = \"c:/Program Files (x86)/winmerge/winmergeu.exe\" \"$LOCAL\" \"$REMOTE\"
+[mergetool "kdiff3"]
+	path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+[push]
+	default = upstream
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	df = diff
+	lg = log -p
+	slog = log --pretty=oneline --abbrev-commit
+	plog = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	hist = log --graph --abbrev-commit --decorate --date=short --pretty=format:\"%C(bold cyan)%h%C(reset) - %Creset%C(bold yellow)%ad%C(reset) |%C(yellow)%d%C(reset) %C(white)%s %C(cyan)- %an, %C(reset)%ar%C(reset)\"
+	histall = log --graph --abbrev-commit --decorate --date=short --pretty=format:\"%C(bold cyan)%h%C(reset) - %Creset%C(bold yellow)%ad%C(reset) |%C(yellow)%d%C(reset) %C(white)%s %C(cyan)- %an, %C(reset)%ar%C(reset)\" --all
+	type = cat-file -t
+	dump = cat-file -p
